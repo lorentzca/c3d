@@ -1,4 +1,4 @@
-# Create Cnsul Cluster on Docker
+# Create Consul Cluster on Docker
 
 [consul](https://www.consul.io) on [docker](https://www.docker.com/)
 
