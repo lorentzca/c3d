@@ -1,0 +1,30 @@
+dnsdock:
+  image: tonistiigi/dnsdock
+  volumes:
+    - "/var/run/docker.sock:/var/run/docker.sock"
+  ports:
+    - 172.17.0.1:53:53/udp
+
+server1:
+  build: .
+  dns:
+    - 172.17.0.1
+  command: /usr/local/sbin/consul agent -config-dir=/etc/consul.d/bootstrap
+
+server2:
+  build: .
+  dns:
+    - 172.17.0.1
+  command: /usr/local/sbin/consul agent -config-dir=/etc/consul.d/server
+
+server3:
+  build: .
+  dns:
+    - 172.17.0.1
+  command: /usr/local/sbin/consul agent -config-dir=/etc/consul.d/server
+
+node1:
+  build: .
+  dns:
+    - 172.17.0.1
+  command: /usr/local/sbin/consul agent -config-dir=/etc/consul.d/client
