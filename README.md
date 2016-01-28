@@ -40,8 +40,21 @@ ex) add server3 to server1 cluster
 docker exec -it $(docker ps -q -f name=server3) consul join c3d_server1.docker
 ```
 
+## Exec command to All members
+
+ex) exec command via server2
+
+```
+docker exec -it $(docker ps -q -f name=server2) consul exec cat /etc/redhat-release
+```
+
 ## DNS
 
 use DNS for two-way access of container each other
 
 see [tonistiigi/dnsdock](https://github.com/tonistiigi/dnsdock)
+
+## TODO
+
+- [ ] Add Consul Web UI
+- [ ] Add Service
