@@ -14,3 +14,6 @@ RUN \
 COPY ./bootstrap.json /etc/consul.d/bootstrap/config.json
 COPY ./server.json    /etc/consul.d/server/config.json
 COPY ./client.json    /etc/consul.d/client/config.json
+
+# consul web ui
+COPY ./consul_web_ui /var/www/consul_web_ui

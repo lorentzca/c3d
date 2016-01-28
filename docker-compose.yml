@@ -11,7 +11,9 @@ server1:
     - 172.17.0.1
   links:
     - dnsdock
-  command: /usr/local/sbin/consul agent -config-dir=/etc/consul.d/bootstrap
+  command: /usr/local/sbin/consul agent -config-dir=/etc/consul.d/bootstrap -ui-dir=/var/www/
+  ports:
+    - "8500:8500"
 
 server2:
   build: .
