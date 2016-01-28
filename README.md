@@ -68,5 +68,5 @@ see [tonistiigi/dnsdock](https://github.com/tonistiigi/dnsdock)
 
 ## TODO
 
-- [ ] Add Consul Web UI
+- [x] Add Consul Web UI
 - [ ] Add Service
