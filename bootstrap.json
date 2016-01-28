@@ -3,5 +3,6 @@
     "bootstrap_expect": 3,
     "server": true,
     "data_dir": "/var/consul",
+    "encrypt": "Xa002vevVldUrIJlFymgOg==",
     "client_addr": "0.0.0.0"
 }
