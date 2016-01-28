@@ -56,7 +56,7 @@ check your docker-machine ip address
 docker-machine ip <docker-machine name>
 ```
 
-open url -> http://<your docker-machine ip address>:8500/ui/
+open url -> http://\<your docker-machine ip address\>:8500/ui/
 
 ![consul_web_ui](./images/consul_web_ui.gif)
 
