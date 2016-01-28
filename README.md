@@ -48,6 +48,18 @@ ex) exec command via server2
 docker exec -it $(docker ps -q -f name=server2) consul exec cat /etc/redhat-release
 ```
 
+## Consul Web UI
+
+check your docker-machine ip address
+
+```
+docker-machine ip <docker-machine name>
+```
+
+open url -> http://\<your docker-machine ip address\>:8500/ui/
+
+![consul_web_ui](./images/consul_web_ui.gif)
+
 ## DNS
 
 use DNS for two-way access of container each other
