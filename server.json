@@ -1,6 +1,6 @@
 {
     "datacenter": "c3d-dc",
-    "bootstrap": false,
+    "bootstrap_expect": 3,
     "server": true,
     "data_dir": "/var/consul",
     "encrypt": "Xa002vevVldUrIJlFymgOg==",
