@@ -8,10 +8,9 @@ RUN \
   rm -f consul.zip && \
   mv consul /usr/local/sbin && \
   chmod 755 /usr/local/sbin/consul && \
-  mkdir -p /etc/consul.d/{bootstrap,server,client}
+  mkdir -p /etc/consul.d/{server,client}
 
 # configure consul
-COPY ./bootstrap.json /etc/consul.d/bootstrap/config.json
 COPY ./server.json    /etc/consul.d/server/config.json
 COPY ./client.json    /etc/consul.d/client/config.json
 
