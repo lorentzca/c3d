@@ -48,6 +48,14 @@ ex) exec command via server2
 docker exec -it $(docker ps -q -f name=server2) consul exec cat /etc/redhat-release
 ```
 
+## Scale cluster
+
+ex) scale server3
+
+```
+docker-compose scale server3=4
+```
+
 ## Consul Web UI
 
 check your docker-machine ip address
