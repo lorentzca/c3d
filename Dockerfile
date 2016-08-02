@@ -1,14 +1,18 @@
-FROM centos:7
+FROM alpine
 
 # install consul
 RUN \
-  yum install -y curl wget unzip bind-utils && \
-  wget --no-check-certificate -O consul.zip https://releases.hashicorp.com/consul/0.6.0/consul_0.6.0_linux_amd64.zip && \
-  unzip consul.zip && \
-  rm -f consul.zip && \
-  mv consul /usr/local/sbin && \
-  chmod 755 /usr/local/sbin/consul && \
-  mkdir -p /etc/consul.d/{server,client}
+  apk --update add --no-cache --virtual build-dependencies \
+  curl \
+  wget \
+  unzip && \
+  wget https://releases.hashicorp.com/consul/0.6.4/consul_0.6.4_linux_amd64.zip && \
+  unzip consul_0.6.4_linux_amd64.zip && \
+  rm -f consul_0.6.4_linux_amd64.zip && \
+  mv consul /usr/local/bin && \
+  chmod 755 /usr/local/bin/consul && \
+  mkdir -p /etc/consul.d/{server,client} && \
+  apk del build-dependencies
 
 # configure consul
 COPY ./server.json    /etc/consul.d/server/config.json
