@@ -11,10 +11,13 @@ RUN \
   rm -f consul_0.6.4_linux_amd64.zip && \
   mv consul /usr/local/bin && \
   chmod 755 /usr/local/bin/consul && \
-  mkdir -p /etc/consul.d/{server,client} && \
+  mkdir -p /etc/consul.d/leader && \
+  mkdir -p /etc/consul.d/server && \
+  mkdir -p /etc/consul.d/client && \
   apk del build-dependencies
 
 # configure consul
+COPY ./leader.json    /etc/consul.d/leader/config.json
 COPY ./server.json    /etc/consul.d/server/config.json
 COPY ./client.json    /etc/consul.d/client/config.json
 

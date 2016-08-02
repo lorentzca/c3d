@@ -4,5 +4,5 @@
     "data_dir": "/var/consul",
     "encrypt": "Xa002vevVldUrIJlFymgOg==",
     "client_addr": "0.0.0.0",
-    "start_join": ["c3d_server1.docker", "c3d_server2.docker", "c3d_server3.docker"]
+    "start_join": ["server1"]
 }

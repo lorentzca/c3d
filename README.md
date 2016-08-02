@@ -21,7 +21,7 @@ docker-compose up
 ex) login to server2
 
 ```
-docker exec -it $(docker ps -q -f name=server2) bash
+docker exec -it $(docker ps -q -f name=server2) sh
 ```
 
 ## Check members
@@ -67,12 +67,6 @@ docker-machine ip <docker-machine name>
 open url -> http://\<your docker-machine ip address\>:8500/ui/
 
 ![consul_web_ui](./images/consul_web_ui.gif)
-
-## DNS
-
-use DNS for two-way access of container each other
-
-see [tonistiigi/dnsdock](https://github.com/tonistiigi/dnsdock)
 
 ## TODO
 

@@ -5,5 +5,5 @@
     "data_dir": "/var/consul",
     "encrypt": "Xa002vevVldUrIJlFymgOg==",
     "client_addr": "0.0.0.0",
-    "start_join": ["server1"]
+    "start_join": ["127.0.0.1"]
 }
