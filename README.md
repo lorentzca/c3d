@@ -45,7 +45,7 @@ docker exec -it $(docker ps -q -f name=server3) consul join c3d_server1.docker
 ex) exec command via server2
 
 ```
-docker exec -it $(docker ps -q -f name=server2) consul exec cat /etc/redhat-release
+docker exec -it $(docker ps -q -f name=server2) consul exec uname -a
 ```
 
 ## Scale cluster
@@ -58,13 +58,7 @@ docker-compose scale server3=4
 
 ## Consul Web UI
 
-check your docker-machine ip address
-
-```
-docker-machine ip <docker-machine name>
-```
-
-open url -> http://\<your docker-machine ip address\>:8500/ui/
+<http://localhost:8500/ui/consul_web_ui/>
 
 ![consul_web_ui](./images/consul_web_ui.gif)
 
