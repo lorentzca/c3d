@@ -1,14 +1,17 @@
 FROM alpine
 
+# consul version
+ARG version="0.7.2"
+
 # install consul
 RUN \
   apk --update add --no-cache --virtual build-dependencies \
   curl \
   wget \
   unzip && \
-  wget https://releases.hashicorp.com/consul/0.6.4/consul_0.6.4_linux_amd64.zip && \
-  unzip consul_0.6.4_linux_amd64.zip && \
-  rm -f consul_0.6.4_linux_amd64.zip && \
+  wget https://releases.hashicorp.com/consul/${version}/consul_${version}_linux_amd64.zip && \
+  unzip consul_${version}_linux_amd64.zip && \
+  rm -f consul_${version}_linux_amd64.zip && \
   mv consul /usr/local/bin && \
   chmod 755 /usr/local/bin/consul && \
   mkdir -p /etc/consul.d/leader && \
