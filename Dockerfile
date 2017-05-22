@@ -1,7 +1,7 @@
 FROM alpine
 
 # consul version
-ARG version="0.7.2"
+ARG version="0.8.3"
 
 # install consul
 RUN \
